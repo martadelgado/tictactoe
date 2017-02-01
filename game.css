@@ -1,7 +1,22 @@
 h1 {
-  color: blue;
+  color: #577C76;
+  font-family: Futura;
+  font-weight: lighter;
+  text-align: center;
+  position: absolute;
 }
 
+body {
+  background-color: #B1D4CE;
+}
+
+#game-board {
+
+}
+
+.newGame{
+
+}
 .tile {
   border-style: solid;
   border-color: black;
