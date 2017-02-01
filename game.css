@@ -11,18 +11,22 @@ body {
 }
 
 #game-board {
-
+  font-size: 72px;
 }
 
 .newGame{
-
+  background-color: #577C76;
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
 }
+
 .tile {
   border-style: solid;
-  border-color: black;
+  border-color: #577C76;
   border-width: 1px;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   display: inline-block;
 }
 

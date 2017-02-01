@@ -37,10 +37,15 @@ function threeRow() {
     if ($("#0-0").text() === $("#1-1").text() && $("#0-0").text() === $("#2-2").text() && $("#0-0").text() !== "") {
         alert("You Win!");
     }
-    if ($("#0-2").text() === $("#1-1").text() && $("#0-2").text() === $("#2-1").text() && $("#0-2").text() !== "") {
+    if ($("#0-2").text() === $("#1-1").text() && $("#0-2").text() === $("#2-0").text() && $("#0-2").text() !== "") {
         alert("You Win!");
     }
+    else if ($("#game-board .tile") === "X" || $("#game-board .tile") === "O") {
+        alert("Tie Game!");
+    }
   }
+
+
 
 $(document).ready(function() {
   makeGrid();
