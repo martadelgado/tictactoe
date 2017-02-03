@@ -1,9 +1,3 @@
-// var grid = [
-//           [1,2,3],
-//           [4,5,6],
-//           [7,8,9]
-// ];
-
 function makeGrid(){
   for (var i = 0; i < 3; i++) {
     var row = $("<tr>");
@@ -16,28 +10,28 @@ function makeGrid(){
 }
 
 function threeRow() {
-    if ($("#0-0").text() === $("#0-1").text() && $("#0-0").text() === $("#0-2").text() && $("#0-0").text() !== ""){
+    if ($("#tile0-0").text() === $("#tile0-1").text() && $("#tile0-0").text() === $("#tile0-2").text() && $("#tile0-0").text() !== ""){
         setTimeout(function(){ alert("You Win!"); }, 300);
     }
-    if ($("#1-0").text() === $("#1-1").text() && $("#1-0").text() === $("#1-2").text() && $("#1-0").text() !== "") {
+    if ($("#tile1-0").text() === $("#tile1-1").text() && $("#tile1-0").text() === $("#tile1-2").text() && $("#tile1-0").text() !== "") {
         setTimeout(function(){ alert("You Win!"); }, 300);
     }
-    if ($("#2-0").text() === $("#2-1").text() && $("#2-0").text() === $("#2-2").text() && $("#2-0").text() !== "") {
+    if ($("#tile2-0").text() === $("#tile2-1").text() && $("#tile2-0").text() === $("#tile2-2").text() && $("#tile2-0").text() !== "") {
         setTimeout(function(){ alert("You Win!"); }, 300);
     }
-    if ($("#0-0").text() === $("#1-0").text() && $("#0-0").text() === $("#2-0").text() && $("#0-0").text() !== ""){
+    if ($("#tile0-0").text() === $("#tile1-0").text() && $("#tile0-0").text() === $("#tile2-0").text() && $("#tile0-0").text() !== ""){
         setTimeout(function(){ alert("You Win!"); }, 300);
     }
-    if ($("#0-1").text() === $("#1-1").text() && $("#0-1").text() === $("#2-1").text() && $("#0-1").text() !== "") {
+    if ($("#tile0-1").text() === $("#tile1-1").text() && $("#tile0-1").text() === $("#tile2-1").text() && $("#tile0-1").text() !== "") {
         setTimeout(function(){ alert("You Win!"); }, 300);
     }
-    if ($("#0-2").text() === $("#1-2").text() && $("#0-2").text() === $("#2-2").text() && $("#0-2").text() !== "") {
+    if ($("#tile0-2").text() === $("#tile1-2").text() && $("#tile0-2").text() === $("#tile2-2").text() && $("#tile0-2").text() !== "") {
         setTimeout(function(){ alert("You Win!"); }, 300);
     }
-    if ($("#0-0").text() === $("#1-1").text() && $("#0-0").text() === $("#2-2").text() && $("#0-0").text() !== "") {
+    if ($("#tile0-0").text() === $("#tile1-1").text() && $("#tile0-0").text() === $("#tile2-2").text() && $("#tile0-0").text() !== "") {
         setTimeout(function(){ alert("You Win!"); }, 300);
     }
-    if ($("#0-2").text() === $("#1-1").text() && $("#0-2").text() === $("#2-0").text() && $("#0-2").text() !== "") {
+    if ($("#tile0-2").text() === $("#tile1-1").text() && $("#tile0-2").text() === $("#tile2-0").text() && $("#tile0-2").text() !== "") {
         setTimeout(function(){ alert("You Win!"); }, 300);
     }
 }
@@ -51,17 +45,14 @@ function countMoves() {
 
 $(document).ready(function() {
   makeGrid();
-  var img = document.createElement("img");
-  img.src = "pic3.png";
-  var img1 = document.createElement("img");
-  img1.src = "pic2.png";
+  var symbol = "X";
 
   $(".tile").on("click", function(){
-    $(this).html(img1);
-    if (img1 === img1){
-      img1 = img;
+    $(this).html(symbol);
+    if (symbol === "X"){
+      symbol = "O";
     } else {
-      img = img1;
+      symbol = "X";
     }
     threeRow();
     });
@@ -69,7 +60,7 @@ $(document).ready(function() {
       moves++;
       countMoves();
     });
-  });
+    });
   $(".newGame").click(function() {
     location.reload();
 });

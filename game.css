@@ -4,22 +4,59 @@ h1 {
   font-weight: lighter;
   font-size: 48px;
   text-align: center;
-  position: absolute;
+  position: relative;
 }
 
+#tic {
+  color: #66FF66;
+}
+
+#tac {
+  color: #B266FF;
+}
+
+#toe {
+  color: #FFFF66;
+}
 body {
-  background-color: #B1D4CE;
+  background-image: url("img/bck1.jpg");
+  background-repeat: no-repeat;
+  background-size: 120%;
 }
 
 #game-board {
-  font-size: 90px;
+  font-size: 250%;
+  margin: 0 auto;
+  color: #3D0295;
 }
 
 .newGame{
-  background-color: #577C76;
+  background-color: #B266FF;
   width: 100px;
   height: 50px;
   border-radius: 15px;
+  margin-bottom: 25px;
+  font-family: Futura;
+  font-size: 14px;
+  color: #FFFF66;
+}
+
+#tile0-0,
+#tile1-2,
+#tile2-0 {
+  background-color: #FFFF66;
+}
+
+#tile0-1,
+#tile1-0,
+#tile2-1 {
+  background-color: #B266FF;
+}
+
+#tile0-2,
+#tile1-1,
+#tile2-2 {
+  background-color: #66FF66;
 }
 
 .tile {
@@ -32,10 +69,12 @@ body {
   display: inline-block;
 }
 
-.player1 {
-  background-color: blue;
+
+/*.playerOne {
+  background-image: url("pic1.jpg");
+  background-repeat: no-repeat;
 }
 
-.player2 {
-  background-color: red;
-}
+.playerTwo {
+  background-image: url("pic2.png");
+}*/
